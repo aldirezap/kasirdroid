@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.FragmentHomeProduk">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshFragmentProduk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:id="@+id/contentListProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="6dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="28dp"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/icons_statistics_64" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="Produk ditemukan"
+                                    android:textColor="@color/black_60_transparent"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/txtJumlahTotalProduk"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="0 Produk"
+                                    android:textColor="@color/black_80_transparent"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="Semua stok produk"
+                                    android:textColor="@color/black_60_transparent"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/txtJumlahTotalStokProduk"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="12dp"
+                                    android:layout_marginEnd="12dp"
+                                    android:fontFamily="sans-serif-light"
+                                    android:text="0 Item"
+                                    android:textColor="@color/black_80_transparent"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="12dp"
+                    android:background="@drawable/bg_pencarian"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editCariProduk"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:ems="10"
+                        android:fontFamily="sans-serif"
+                        android:hint="Cari Produk | Kode Produk"
+                        android:inputType="textPersonName"
+                        android:paddingStart="16dp"
+                        android:textSize="14sp" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:tint="#B8B8B8"
+                        app:srcCompat="@drawable/ic_search" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Daftar Produk"
+                    android:textColor="@color/black_80_transparent"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerProduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="6dp"
+                    android:overScrollMode="never" />
+
+                <Button
+                    android:id="@+id/btnLoadMoreProduk"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="116dp"
+                    android:background="@color/transparent"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:drawablePadding="6dp"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Lihat lainnya"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black_80_transparent" />
+
+                <LinearLayout
+                    android:id="@+id/layoutNotFoundProduk"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="vertical"
+                    android:padding="40dp">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@drawable/icons_product_64" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif-light"
+                        android:text="Produk tidak ditemukan"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

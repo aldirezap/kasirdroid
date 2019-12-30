@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/transparent" />
+            <stroke android:width="1dp" android:color="#F0F0F0"/>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+</layer-list>
+
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_focused="true"
+        android:state_enabled="false"
+        android:state_pressed="true"
+        android:drawable="@drawable/abc_list_selector_disabled_holo_dark">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#F0F0F0"/>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item
+        android:state_focused="true"
+        android:state_enabled="false"
+        android:drawable="@drawable/abc_list_selector_disabled_holo_dark">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#F0F0F0"/>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item
+        android:state_focused="true"
+        android:state_pressed="true"
+        android:drawable="@drawable/abc_list_selector_background_transition_holo_dark">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#F0F0F0"/>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item
+        android:state_focused="false"
+        android:state_pressed="true"
+        android:drawable="@drawable/abc_list_selector_background_transition_holo_dark">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#F0F0F0"/>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item
+        android:state_focused="true"
+        android:drawable="@drawable/abc_list_focused_holo">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#F0F0F0"/>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@android:color/transparent">
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#F0F0F0"/>
+            <corners android:radius="6dp" />
+        </shape>
+    </item>
+</selector> -->

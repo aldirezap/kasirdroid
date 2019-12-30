@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Smart Kasir Free</string>
+    <string name="ad_id_interstitial">ca-app-pub-2177502682506857/5406885523</string>
+    <string name="ad_id_banner">ca-app-pub-2177502682506857/9481861904</string>
+    <string name="ad_id_reward">ca-app-pub-2177502682506857/4588967185</string>
+    <string name="ad_id_native">ca-app-pub-2177502682506857/8570791839</string>
+    <string name="ad_id">ca-app-pub-2177502682506857~1794943576</string>
+</resources>

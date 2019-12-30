@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.ActivityAddProduk"
+    android:fitsSystemWindows="true"
+    app:behavior_overlapTop="40dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/button_gradient"
+                    android:tint="@color/white"
+                    app:srcCompat="@drawable/ic_chevron_left" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="Tambahkan Produk"
+                    android:textColor="@color/black_80_transparent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"/>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="6dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Input data produk "
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtKodeProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_spinner"
+                android:ems="10"
+                android:hint="Kode Produk"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="Kode Produk biasanya menggunakan angka yang tertera pada kode bar produk."
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/txtNamaProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_spinner"
+                android:ems="10"
+                android:hint="Nama Produk"
+                android:inputType="text|textCapCharacters"
+                android:padding="12dp"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_kategori"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:minHeight="50dp"
+                    android:padding="14dp"
+                    android:spinnerMode="dialog" />
+
+                <ImageButton
+                    android:id="@+id/btnAddKategori"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_spinner"
+                    android:tint="@android:color/black"
+                    app:srcCompat="@drawable/ic_add" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/txtHargaPokok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner"
+                android:ems="10"
+                android:hint="Harga Pokok"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/txtHargaJual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner"
+                android:ems="10"
+                android:hint="Harga Jual"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="Harga Pokok dan Harga Jual akan digunakan dalam proses perhitungan pendapatan."
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/txtStokProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_spinner"
+                android:ems="10"
+                android:hint="Stok Produk"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="Agar dapat melakukan proses transaksi, stok tidak boleh kosong atau 0."
+                android:textColor="@android:color/black"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/txtDiskonProduk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_spinner"
+                android:ems="10"
+                android:hint="Diskon (opsional)"
+                android:inputType="number"
+                android:maxLength="3"
+                android:padding="12dp"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="top"
+                android:text="Kosongkan form untuk melanjutkan pengisian baru setelah data berhasil ditambahkan."
+                android:textColor="@color/black_80_transparent"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnTambahProduk"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_bayar"
+                android:text="Tambahkan"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

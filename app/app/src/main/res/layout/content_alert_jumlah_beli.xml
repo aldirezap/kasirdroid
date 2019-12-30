@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-light"
+            android:singleLine="true"
+            android:text="Atur jumlah pembelian"
+            android:textColor="@color/black_80_transparent"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="6dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/icons_shopping_cart_64" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtJumlahPembelian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:singleLine="true"
+                    android:text="1"
+                    android:textColor="@color/black_80_transparent"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtTotalHargaBeli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="Rp 20,000"
+                android:textColor="@color/black_80_transparent"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btnKurangiJumlahBeli"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_img_circle_pendaftar"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_remove" />
+
+            <ImageButton
+                android:id="@+id/btnTambahJumlahBeli"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_img_circle_pendaftar"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_add" />
+
+            <ImageButton
+                android:id="@+id/btnHapusDariTransaksi"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_img_circle_pendaftar"
+                android:tint="@color/white"
+                app:srcCompat="@drawable/ic_delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBatalBeli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="Batalkan"
+            android:textAllCaps="false"
+            android:textColor="@color/gradientDashboardStart"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnConfirmJumlahBeli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:text="Simpan"
+            android:textAllCaps="false"
+            android:textColor="@color/gradientDashboardStart" />
+    </LinearLayout>
+
+</LinearLayout>
